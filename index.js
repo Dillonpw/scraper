@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const { MongoClient, ServerApiVersion } = require('mongodb');
-require('dotenv').config()
+require('dotenv').config();
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
@@ -16,7 +16,7 @@ const server = app.listen(3000, () => {
     console.log(`The application started on port ${server.address().port}`);
 });
 
-const uri = process.env.DB_KEY
+const uri = process.env.DB_KEY;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
